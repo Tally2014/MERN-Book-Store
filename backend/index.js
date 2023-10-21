@@ -3,6 +3,11 @@ import { PORT } from "./config.js";
 
 const app = express();
 
+app.get('/', (req,res) => {
+    console.log(req);
+    return res.status(234).send('WELCOME TO MERN STACK TUTORIAL');
+});
+
 app.listen(PORT, () => {
     console.log(`App is listening to port: ${PORT}`);
 });
